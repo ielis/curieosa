@@ -11,7 +11,8 @@
 //! let cu = TrieCurieUtil::default();
 //! 
 //! // Get curie parts from an IRI
-//! let cp: CurieParts<'_, '_> = cu.get_curie_data("http://purl.obolibrary.org/obo/HP_0001250").unwrap();
+//! let iri = "http://purl.obolibrary.org/obo/HP_0001250";
+//! let cp: CurieParts<'_, '_> = cu.get_curie_data(iri).unwrap();
 //! 
 //! assert_eq!(cp.get_prefix(), "HP");
 //! assert_eq!(cp.get_id(), "0001250");

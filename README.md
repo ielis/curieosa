@@ -31,7 +31,6 @@ let cp: CurieParts<'_, '_> = cu.get_curie_data(iri).unwrap();
 
 assert_eq!(cp.get_prefix(), "HP");
 assert_eq!(cp.get_id(), "0001250");
-assert!(false);
 ```
 
 ## Run tests

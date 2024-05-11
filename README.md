@@ -9,6 +9,13 @@ Add the following into your `Cargo.toml` file to use `curie-util` in your code:
 curie-util = {git = 'https://github.com/ielis/curie-util.git', tag = 'v0.0.1'}
 ```
 
+**CREDIT**
+
+The `curie-util` is a Rust port of the [curie-util](https://github.com/prefixcommons/curie-util) library 
+written by Chris Mungall in Java.
+The Rust port is intentionally very similar to the Java library, to simplify its usage.
+
+
 ## Examples
 
 Get an implementation of [`CurieUtil`] backed by a trie with default prefix -> expansion mappings.

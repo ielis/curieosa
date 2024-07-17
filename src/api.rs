@@ -8,7 +8,7 @@ pub trait CurieUtil {
     /// # Example
     ///
     /// ```
-    /// use curie_util::{TrieCurieUtil, CurieParts, CurieUtil};
+    /// use curieosa::{TrieCurieUtil, CurieParts, CurieUtil};
     ///
     /// // Create curie util backed by a trie with default prefix -> IRI mappings.
     /// let curie_util = TrieCurieUtil::default();
@@ -26,7 +26,7 @@ pub trait CurieUtil {
     /// # Example
     ///
     /// ```
-    /// use curie_util::{TrieCurieUtil, CurieParts, CurieUtil};
+    /// use curieosa::{TrieCurieUtil, CurieParts, CurieUtil};
     ///
     /// let curie_util = TrieCurieUtil::default();
     /// let expansion = curie_util.get_expansion("HP");
@@ -41,7 +41,7 @@ pub trait CurieUtil {
     /// # Example
     ///
     /// ```
-    /// use curie_util::{TrieCurieUtil, CurieParts, CurieUtil};
+    /// use curieosa::{TrieCurieUtil, CurieParts, CurieUtil};
     ///
     /// let curie_util = TrieCurieUtil::default();
     ///
@@ -94,7 +94,7 @@ impl<'cu, 'i> CurieParts<'cu, 'i> {
     /// Get slice corresponding to CURIE prefix.
     ///
     /// ```
-    /// # use curie_util::{CurieParts, CuriePrefix};
+    /// # use curieosa::{CurieParts, CuriePrefix};
     ///
     /// let cp = CuriePrefix::from("HP");
     /// let parts = CurieParts::new(cp, "1234567");
@@ -111,7 +111,7 @@ impl<'cu, 'i> CurieParts<'cu, 'i> {
     /// Get slice corresponding to CURIE id.
     ///
     /// ```
-    /// # use curie_util::{CurieParts, CuriePrefix};
+    /// # use curieosa::{CurieParts, CuriePrefix};
     ///
     /// let cp = CuriePrefix::from("HP");
     /// let parts = CurieParts::new(cp, "1234567");

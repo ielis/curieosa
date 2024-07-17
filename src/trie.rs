@@ -18,7 +18,7 @@ impl TrieCurieUtil {
     /// # Examples
     ///
     /// ```
-    /// use curie_util::{TrieCurieUtil, CurieUtil, CurieParts};
+    /// use curieosa::{TrieCurieUtil, CurieUtil, CurieParts};
     ///
     /// let prefix2iri = vec![
     ///   ("GENO", "http://purl.obolibrary.org/obo/GENO_"),
@@ -91,7 +91,7 @@ impl CurieUtil for TrieCurieUtil {
 /// # Example
 /// 
 /// ```
-/// use curie_util::TrieCurieUtil;
+/// use curieosa::TrieCurieUtil;
 /// 
 /// let _cu = TrieCurieUtil::default();
 /// ``` 

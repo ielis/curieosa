@@ -1,5 +1,5 @@
 [package]
-name = "curie-util"
+name = "curieosa"
 version = "0.0.2-SNAPSHOT"
 edition = "2021"
 

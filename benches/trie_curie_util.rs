@@ -1,6 +1,6 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
-use curie_util::{CurieUtil, TrieCurieUtil};
+use curieosa::{CurieUtil, TrieCurieUtil};
 
 fn benchmark_trie_curie_util(c: &mut Criterion) {
     let tcu = TrieCurieUtil::default();

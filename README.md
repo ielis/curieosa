@@ -1,17 +1,17 @@
-# curie-util
+# curieosa
 
 A crate for parsing Internationalized Resource Identifiers (IRIs)
 into Compact Uniform Resource Identifiers (CURIEs).
 
-Add the following into your `Cargo.toml` file to use `curie-util` in your code:
+Add the following into your `Cargo.toml` file to use `curieosa` in your code:
 
 ```toml
-curie-util = {git = 'https://github.com/ielis/curie-util.git', tag = 'v0.0.1'}
+curieosa = {git = 'https://github.com/ielis/curieosa.git', tag = 'v0.1.0'}
 ```
 
 **CREDIT**
 
-The `curie-util` is a Rust port of the [curie-util](https://github.com/prefixcommons/curie-util) library 
+The `curieosa` is heavily inspired by the [curie-util](https://github.com/prefixcommons/curie-util) library 
 written by Chris Mungall in Java.
 The Rust port is intentionally very similar to the Java library, to simplify its usage.
 
@@ -21,7 +21,7 @@ The Rust port is intentionally very similar to the Java library, to simplify its
 Get an implementation of [`CurieUtil`] backed by a trie with default prefix -> expansion mappings.
 
 ```rust
-use curie_util::{TrieCurieUtil, CurieUtil, CurieParts};
+use curieosa::{TrieCurieUtil, CurieUtil, CurieParts};
 
 let cu = TrieCurieUtil::default();
 

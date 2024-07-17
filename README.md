@@ -3,7 +3,7 @@
 A crate for parsing Internationalized Resource Identifiers (IRIs)
 into Compact Uniform Resource Identifiers (CURIEs).
 
-Add the following into your `Cargo.toml` file to use `curie-util` in your code:
+Add the following into your `Cargo.toml` file to use `curieosa` in your code:
 
 ```toml
 curieosa = {git = 'https://github.com/ielis/curieosa.git', tag = 'v0.0.1'}

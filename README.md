@@ -1,5 +1,8 @@
 # curieosa
 
+![crates.io](https://img.shields.io/crates/v/curieosa.svg)
+![https://github.com/ielis/curieosa/actions/workflows/ci.yml](https://github.com/ielis/curieosa/actions/workflows/ci.yml/badge.svg)
+
 A crate for parsing Internationalized Resource Identifiers (IRIs)
 into Compact Uniform Resource Identifiers (CURIEs).
 

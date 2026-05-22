@@ -115,14 +115,14 @@ impl CurieUtil for Box<TrieCurieUtil> {
 }
 
 /// Create `TrieCurieUtil` from default 'prefix -> expansion' mappings.
-/// 
+///
 /// # Example
-/// 
+///
 /// ```
 /// use curieosa::TrieCurieUtil;
-/// 
+///
 /// let _cu = TrieCurieUtil::default();
-/// ``` 
+/// ```
 impl Default for TrieCurieUtil {
     fn default() -> Self {
         let prefix2iri = parse_default_prefix2iri();
@@ -149,7 +149,15 @@ mod tests {
         }
 
         check_curie_parts!("http://purl.obolibrary.org/obo/HP_0001250", "HP", "0001250");
-        check_curie_parts!("http://purl.obolibrary.org/obo/OMIM_256000", "OMIM", "256000");
-        check_curie_parts!("https://www.ncbi.nlm.nih.gov/snp/rs1234567", "dbSNP", "rs1234567");
+        check_curie_parts!(
+            "http://purl.obolibrary.org/obo/OMIM_256000",
+            "OMIM",
+            "256000"
+        );
+        check_curie_parts!(
+            "https://www.ncbi.nlm.nih.gov/snp/rs1234567",
+            "dbSNP",
+            "rs1234567"
+        );
     }
 }

@@ -86,6 +86,20 @@ impl CurieUtil for TrieCurieUtil {
     }
 }
 
+/// [`CurieUtil`] is also implemented for `&TrieCurieUtil`.
+///
+/// # Examples
+///
+/// ```
+/// use curieosa::{TrieCurieUtil, CurieUtil};
+///
+/// let cu = TrieCurieUtil::default();
+///
+/// fn use_as_trait(cu: impl CurieUtil) {
+///     assert!(cu.has_prefix("HP"));
+/// }
+/// use_as_trait(&cu);
+/// ```
 impl CurieUtil for &TrieCurieUtil {
     fn get_curie_data<'cu, 'i>(&'cu self, iri: &'i str) -> Option<CurieParts<'cu, 'i>> {
         (*self).get_curie_data(iri)
@@ -100,6 +114,20 @@ impl CurieUtil for &TrieCurieUtil {
     }
 }
 
+/// [`CurieUtil`] is also implemented for the boxed version `Box<TrieCurieUtil>`.
+///
+/// # Example
+///
+/// ```
+/// use curieosa::{TrieCurieUtil, CurieUtil};
+///
+/// let cu = Box::new(TrieCurieUtil::default());
+///
+/// fn use_as_trait(cu: impl CurieUtil) {
+///     assert!(cu.has_prefix("HP"));
+/// }
+/// use_as_trait(cu);
+/// ```
 impl CurieUtil for Box<TrieCurieUtil> {
     fn get_curie_data<'cu, 'i>(&'cu self, iri: &'i str) -> Option<CurieParts<'cu, 'i>> {
         (**self).get_curie_data(iri)

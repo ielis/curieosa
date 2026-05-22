@@ -9,7 +9,7 @@ into Compact Uniform Resource Identifiers (CURIEs).
 Add the following into your `Cargo.toml` file to use `curieosa` in your code:
 
 ```toml
-curieosa = "0.1.0"
+curieosa = "0.1.1"
 ```
 
 **CREDIT**

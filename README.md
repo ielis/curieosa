@@ -1,19 +1,22 @@
 # curieosa
 
+![crates.io](https://img.shields.io/crates/v/curieosa.svg)
+![https://github.com/ielis/curieosa/actions/workflows/ci.yml](https://github.com/ielis/curieosa/actions/workflows/ci.yml/badge.svg)
+
 A crate for parsing Internationalized Resource Identifiers (IRIs)
 into Compact Uniform Resource Identifiers (CURIEs).
 
 Add the following into your `Cargo.toml` file to use `curieosa` in your code:
 
 ```toml
-curieosa = "0.1.0"
+curieosa = "0.1.1"
 ```
 
 **CREDIT**
 
-The `curieosa` is heavily inspired by the [curie-util](https://github.com/prefixcommons/curie-util) library 
+`curieosa` is heavily inspired by the [curie-util](https://github.com/prefixcommons/curie-util) library 
 written by Chris Mungall in Java.
-The Rust port is intentionally very similar to the Java library, to simplify its usage.
+This Rust port is intentionally very similar to the Java library, to simplify its usage.
 
 
 ## Examples

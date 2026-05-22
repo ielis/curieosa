@@ -1,6 +1,6 @@
 /// `CurieUtil` can expand prefix into an expansion, check if a prefix can be expanded,
 /// and find CURIE subparts in an IRI.
-/// 
+///
 /// `CurieUtil` is an object safe trait.
 pub trait CurieUtil {
     /// Find CURIE `prefix` and `id` in an IRI.
@@ -123,7 +123,6 @@ impl<'cu, 'i> CurieParts<'cu, 'i> {
     }
 }
 
-
 #[cfg(test)]
 mod test {
     use super::CurieUtil;
@@ -133,5 +132,4 @@ mod test {
         // A test that should not compile unless `CurieUtil` is object safe!
         let _a: Option<&dyn CurieUtil> = None;
     }
-
 }

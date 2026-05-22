@@ -1,4 +1,4 @@
-/* 
+/*
 Module with bundled CURIE -> IRI pairs.
 */
 
@@ -13,7 +13,7 @@ pub(crate) fn parse_default_prefix2iri() -> Vec<(&'static str, &'static str)> {
         // `#`` as a simple comment will not work. Some CURIEs have `#` as a part.
         // However, we doctored the file to ensure `# ` represents a comment
         let end = line.find("# ").unwrap_or(line.len());
-        
+
         let (relevant, _) = line.split_at(end);
         if relevant.is_empty() {
             continue; // a blank line
@@ -32,7 +32,6 @@ pub(crate) fn parse_default_prefix2iri() -> Vec<(&'static str, &'static str)> {
 
     prefix2iri
 }
-
 
 #[cfg(test)]
 mod tests {

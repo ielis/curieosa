@@ -86,6 +86,34 @@ impl CurieUtil for TrieCurieUtil {
     }
 }
 
+impl CurieUtil for &TrieCurieUtil {
+    fn get_curie_data<'cu, 'i>(&'cu self, iri: &'i str) -> Option<CurieParts<'cu, 'i>> {
+        (*self).get_curie_data(iri)
+    }
+
+    fn get_expansion(&self, prefix: &str) -> Option<&str> {
+        (*self).get_expansion(prefix)
+    }
+
+    fn has_prefix(&self, prefix: &str) -> bool {
+        (*self).has_prefix(prefix)
+    }
+}
+
+impl CurieUtil for Box<TrieCurieUtil> {
+    fn get_curie_data<'cu, 'i>(&'cu self, iri: &'i str) -> Option<CurieParts<'cu, 'i>> {
+        (**self).get_curie_data(iri)
+    }
+
+    fn get_expansion(&self, prefix: &str) -> Option<&str> {
+        (**self).get_expansion(prefix)
+    }
+
+    fn has_prefix(&self, prefix: &str) -> bool {
+        (**self).has_prefix(prefix)
+    }
+}
+
 /// Create `TrieCurieUtil` from default 'prefix -> expansion' mappings.
 /// 
 /// # Example
